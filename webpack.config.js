@@ -7,7 +7,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
   },
    plugins: [
     new HtmlWebpackPlugin({
-      title: 'Output Management',
+      title: 'Weather App',
+          template: "src/index.html",
     }),
   ],
    output: {
