@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather App</title>
 </head>
 
 <body>
     <div class="current">
         <div class="search">
-            <input type="text" name="city" id="city" placeholder="Enter your location...">
+            <input type="text" name="city" id="city" placeholder="Enter your location..." value="la spezia">
             <img src='<%=require("./assets/search.png")%>' alt="search Icon" id="search">
         </div>
         <div class="condition-icon">
@@ -21,99 +21,149 @@
             <h3 id="currentConditionText"></h3>
         </div>
     </div>
-    <div class="today">
-        <H3>Today:</H3>
-        <div class="hourly-holder">
-            <div class="hourlyInfo">
-                <h6 class="hour">12:00</h6>
-                <div class="condition-icon">
-                    <img src="" alt="" .class="hourlyConditionIcon">
+    <div class="forecast">
+        <div class="today">
+            <H3>Today:</H3>
+            <div class="hourly-holder">
+                <div class="hourlyInfo">
+                    <h6 class="hour">12:00</h6>
+                    <div class="condition-icon">
+                        <img src="" alt="" .class="hourlyConditionIcon">
+                    </div>
+                    <h5 class="hourlyTemp">3*C</h5>
                 </div>
-                <h5 class="hourlyTemp">3*C</h5>
+                <div class="hourlyInfo">
+                    <h6 class="hour">12:00</h6>
+                    <div class="condition-icon">
+                        <img src="" alt="" .class="hourlyConditionIcon">
+                    </div>
+                    <h5 class="hourlyTemp">3*C</h5>
+                </div>
+                <div class="hourlyInfo">
+                    <h6 class="hour">12:00</h6>
+                    <div class="condition-icon">
+                        <img src="" alt="" .class="hourlyConditionIcon">
+                    </div>
+                    <h5 class="hourlyTemp">3*C</h5>
+                </div>
+                <div class="hourlyInfo">
+                    <h6 class="hour">12:00</h6>
+                    <div class="condition-icon">
+                        <img src="" alt="" .class="hourlyConditionIcon">
+                    </div>
+                    <h5 class="hourlyTemp">3*C</h5>
+                </div>
+                <div class="hourlyInfo">
+                    <h6 class="hour">12:00</h6>
+                    <div class="condition-icon">
+                        <img src="" alt="" .class="hourlyConditionIcon">
+                    </div>
+                    <h5 class="hourlyTemp">3*C</h5>
+                </div>
+                <div class="hourlyInfo">
+                    <h6 class="hour">12:00</h6>
+                    <div class="condition-icon">
+                        <img src="" alt="" .class="hourlyConditionIcon">
+                    </div>
+                    <h5 class="hourlyTemp">3*C</h5>
+                </div>
+                <div class="hourlyInfo">
+                    <h6 class="hour">12:00</h6>
+                    <div class="condition-icon">
+                        <img src="" alt="" .class="hourlyConditionIcon">
+                    </div>
+                    <h5 class="hourlyTemp">3*C</h5>
+                </div>
+                <div class="hourlyInfo">
+                    <h6 class="hour">12:00</h6>
+                    <div class="condition-icon">
+                        <img src="" alt="" .class="hourlyConditionIcon">
+                    </div>
+                    <h5 class="hourlyTemp">3*C</h5>
+                </div>
+                <div class="hourlyInfo">
+                    <h6 class="hour">12:00</h6>
+                    <div class="condition-icon">
+                        <img src="" alt="" .class="hourlyConditionIcon">
+                    </div>
+                    <h5 class="hourlyTemp">3*C</h5>
+                </div>
+                <div class="hourlyInfo">
+                    <h6 class="hour">12:00</h6>
+                    <div class="condition-icon">
+                        <img src="" alt="" .class="hourlyConditionIcon">
+                    </div>
+                    <h5 class="hourlyTemp">3*C</h5>
+                </div>
+                <div class="hourlyInfo">
+                    <h6 class="hour">12:00</h6>
+                    <div class="condition-icon">
+                        <img src="" alt="" .class="hourlyConditionIcon">
+                    </div>
+                    <h5 class="hourlyTemp">3*C</h5>
+                </div>
+                <div class="hourlyInfo">
+                    <h6 class="hour">12:00</h6>
+                    <div class="condition-icon">
+                        <img src="" alt="" .class="hourlyConditionIcon">
+                    </div>
+                    <h5 class="hourlyTemp">3*C</h5>
+                </div>
+                <div class="hourlyInfo">
+                    <h6 class="hour">12:00</h6>
+                    <div class="condition-icon">
+                        <img src="" alt="" .class="hourlyConditionIcon">
+                    </div>
+                    <h5 class="hourlyTemp">3*C</h5>
+                </div>
             </div>
-            <div class="hourlyInfo">
-                <h6 class="hour">12:00</h6>
-                <div class="condition-icon">
-                    <img src="" alt="" .class="hourlyConditionIcon">
+            <div class="today-details-holder">
+                <div class="humidity">
+                    <h4>HUMIDITY</h4>
+                    <h2></h2>
                 </div>
-                <h5 class="hourlyTemp">3*C</h5>
+                <div class="wind">
+                    <h4>WIND</h4>
+                    <h2></h2>
+                </div>
+                <div class="sunRise">
+                    <h4>SUNRISE</h4>
+                    <h2></h2>
+                </div>
+                <div class="sunSet">
+                    <h4>SUNSET</h4>
+                    <h2></h2>
+                </div>
+
             </div>
-            <div class="hourlyInfo">
-                <h6 class="hour">12:00</h6>
-                <div class="condition-icon">
-                    <img src="" alt="" .class="hourlyConditionIcon">
+        </div>
+        <div class="future">
+            <H3>Three days forecast:</H3>
+            <div class="daily-holder">
+                <div class="dailyInfo">
+                    <h6 class="day"></h6>
+                    <div class="condition-icon">
+                        <img src="" alt="" .class="dailyConditionIcon">
+                    </div>
+                    <h5 class="minTemp"></h5>
+                    <h5 class="maxTemp"></h5>
                 </div>
-                <h5 class="hourlyTemp">3*C</h5>
-            </div>
-            <div class="hourlyInfo">
-                <h6 class="hour">12:00</h6>
-                <div class="condition-icon">
-                    <img src="" alt="" .class="hourlyConditionIcon">
+                <div class="dailyInfo">
+                    <h6 class="day"></h6>
+                    <div class="condition-icon">
+                        <img src="" alt="" .class="dailyConditionIcon">
+                    </div>
+                    <h5 class="minTemp"></h5>
+                    <h5 class="maxTemp"></h5>
                 </div>
-                <h5 class="hourlyTemp">3*C</h5>
-            </div>
-            <div class="hourlyInfo">
-                <h6 class="hour">12:00</h6>
-                <div class="condition-icon">
-                    <img src="" alt="" .class="hourlyConditionIcon">
+                <div class="dailyInfo">
+                    <h6 class="day"></h6>
+                    <div class="condition-icon">
+                        <img src="" alt="" .class="dailyConditionIcon">
+                    </div>
+                    <h5 class="minTemp"></h5>
+                    <h5 class="maxTemp"></h5>
                 </div>
-                <h5 class="hourlyTemp">3*C</h5>
-            </div>
-            <div class="hourlyInfo">
-                <h6 class="hour">12:00</h6>
-                <div class="condition-icon">
-                    <img src="" alt="" .class="hourlyConditionIcon">
-                </div>
-                <h5 class="hourlyTemp">3*C</h5>
-            </div>
-            <div class="hourlyInfo">
-                <h6 class="hour">12:00</h6>
-                <div class="condition-icon">
-                    <img src="" alt="" .class="hourlyConditionIcon">
-                </div>
-                <h5 class="hourlyTemp">3*C</h5>
-            </div>
-            <div class="hourlyInfo">
-                <h6 class="hour">12:00</h6>
-                <div class="condition-icon">
-                    <img src="" alt="" .class="hourlyConditionIcon">
-                </div>
-                <h5 class="hourlyTemp">3*C</h5>
-            </div>
-            <div class="hourlyInfo">
-                <h6 class="hour">12:00</h6>
-                <div class="condition-icon">
-                    <img src="" alt="" .class="hourlyConditionIcon">
-                </div>
-                <h5 class="hourlyTemp">3*C</h5>
-            </div>
-            <div class="hourlyInfo">
-                <h6 class="hour">12:00</h6>
-                <div class="condition-icon">
-                    <img src="" alt="" .class="hourlyConditionIcon">
-                </div>
-                <h5 class="hourlyTemp">3*C</h5>
-            </div>
-            <div class="hourlyInfo">
-                <h6 class="hour">12:00</h6>
-                <div class="condition-icon">
-                    <img src="" alt="" .class="hourlyConditionIcon">
-                </div>
-                <h5 class="hourlyTemp">3*C</h5>
-            </div>
-            <div class="hourlyInfo">
-                <h6 class="hour">12:00</h6>
-                <div class="condition-icon">
-                    <img src="" alt="" .class="hourlyConditionIcon">
-                </div>
-                <h5 class="hourlyTemp">3*C</h5>
-            </div>
-            <div class="hourlyInfo">
-                <h6 class="hour">12:00</h6>
-                <div class="condition-icon">
-                    <img src="" alt="" .class="hourlyConditionIcon">
-                </div>
-                <h5 class="hourlyTemp">3*C</h5>
             </div>
         </div>
     </div>
