@@ -39,21 +39,23 @@ displayBackground(weather, astro);
 displayTodayDetails(currentWeather, astro);
 
 searchIconDOM.addEventListener('click', async () => {
-    city = inputCityDOM.value;
-    weather = await getWeatherLocation(inputCityDOM.value).catch(error => {
-        console.error(error);
-        alert('Something went wrong...');
-    });
-    currentWeather = weather.current;
-    forecastday = weather.forecast.forecastday;
-    astro = forecastday[0].astro;
-    displayCurrentWeather();
-    displayDailyWeather(forecastday);
-    displayHourlyWeather(forecastday);
-    displayBackground(weather, astro);
-    displayTodayDetails(currentWeather, astro);
-    console.log(city);
-    inputCityDOM.value = "";
+    if (inputCityDOM.value !='') {
+        city = inputCityDOM.value;
+        weather = await getWeatherLocation(inputCityDOM.value).catch(error => {
+            console.error(error);
+            alert('Something went wrong...');
+        });
+        currentWeather = weather.current;
+        forecastday = weather.forecast.forecastday;
+        astro = forecastday[0].astro;
+        displayCurrentWeather();
+        displayDailyWeather(forecastday);
+        displayHourlyWeather(forecastday);
+        displayBackground(weather, astro);
+        displayTodayDetails(currentWeather, astro);
+        console.log(city);
+        inputCityDOM.value = "";
+    }
 
 })
 
