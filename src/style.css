@@ -1,11 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=League+Spartan:wght@100..900&display=swap');
 
 
-*{
+* {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
 }
-body{
+
+body {
+    font-family: 'Antonio', sans-serif;
+    letter-spacing: 1.2px;
     color: whitesmoke;
     text-shadow: 1px 1px 3px black;
 }
@@ -13,30 +17,32 @@ body{
 ::-webkit-scrollbar {
     width: 5px;
     height: 5px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px rgba(71, 70, 70, 0.932); 
-     background-color: rgba(0, 0, 0, 0.61);
-    border-radius: 10px;
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: rgba(177, 177, 177, 0.308); 
-    border-radius: 10px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #616780ce; 
-  }
+}
 
-.current, .today{
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgba(71, 70, 70, 0.932);
+    background-color: rgba(0, 0, 0, 0.61);
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(177, 177, 177, 0.308);
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #616780ce;
+}
+
+.current,
+.today,
+.future {
     padding-top: 20px;
     width: 100%;
-    height:100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -45,35 +51,50 @@ body{
     background-position: center;
     gap: 20px;
 }
-.search{
+
+.today,
+.future {
+    height: auto;
+}
+
+.forecast {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px;
+}
+
+.search {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    /* border: 1px solid grey;
-    border-radius: 20px;
-    background-color: rgba(0, 0, 0, 0.815); */
     padding: 5px 10px;
     margin-bottom: 10px;
 }
-#city{
+
+#city {
     background: none;
-    border:none;
-    border-bottom: 2px solid white;
+    border: none;
+    border-bottom: 1px solid white;
     color: white;
 }
-#city::placeholder{
-    color: rgb(207, 207, 207);
-font-size: 16px;
+
+#city::placeholder {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
     text-shadow: 1px 1px 3px black;
 }
-#search{
+
+#search {
     width: 20px;
     height: 20px;
     filter: invert(100%) sepia(0%) saturate(7494%) hue-rotate(144deg) brightness(97%) contrast(101%);
 }
 
-.condition-icon{
+.condition-icon {
     width: 80px;
     height: 80px;
     display: flex;
@@ -82,14 +103,15 @@ font-size: 16px;
     border-radius: 50%;
     background-color: rgba(0, 0, 0, 0.39);
 }
-.condition-text{
+
+.condition-text {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
 }
 
-.hourly-holder{
+.hourly-holder {
     width: 80%;
     display: flex;
     flex-direction: row;
@@ -98,7 +120,19 @@ font-size: 16px;
     gap: 8px;
     padding: 8px 0px;
 }
-.hourlyInfo{
+
+.daily-holder {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 0px;
+}
+
+.hourlyInfo,
+.dailyInfo {
     width: 30%;
     background-color: rgba(255, 255, 255, 0.425);
     border-radius: 10px;
@@ -108,10 +142,57 @@ font-size: 16px;
     gap: 8px;
     padding: 5px;
 }
-.hourlyInfo .condition-icon{
+
+.hourlyInfo .condition-icon,
+.dailyInfo .condition-icon {
     height: 60px;
     width: 60px;
 }
-.hourlyInfo .hourlyConditionIcon{
+
+.hourlyInfo .hourlyConditionIcon,
+.dailyInfo .hourlyConditionIcon {
     scale: 0.8;
+}
+
+.today-details-holder {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+}
+
+.today-details-holder div {
+    border: 1px solid gray;
+    border-radius: 10px;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.today-details-holder h4 {
+    color: rgb(116, 114, 114);
+}
+
+.today-details-holder h2 {
+    text-align: right;
+}
+
+@media (min-width: 867px) {
+    body {
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .current {
+        width: 60vw;
+    }
+
+    .forecast {
+        width: 40vw;
+    }
 }
