@@ -1,21 +1,23 @@
 const path = require('path');
+
 const HtmlWebpackPlugin = require('html-webpack-plugin');
- module.exports = {
-   entry: './src/script.js',
-   devServer: {
+
+module.exports = {
+  entry: './src/script.js',
+  devServer: {
     static: './dist',
   },
-   plugins: [
+  plugins: [
     new HtmlWebpackPlugin({
       title: 'Weather App',
-          template: "src/index.html",
+      template: "src/index.html",
     }),
   ],
-   output: {
+  output: {
     filename: 'index.js',
-     path: path.resolve(__dirname, 'dist'),
-   },
-   module: {
+    path: path.resolve(__dirname, 'dist'),
+  },
+  module: {
     rules: [
       {
         test: /\.css$/i,
@@ -26,6 +28,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
         type: 'asset/resource',
       },
     ],
+
   },
 
- };
+};
